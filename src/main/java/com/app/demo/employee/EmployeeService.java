@@ -3,7 +3,6 @@ package com.app.demo.employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -28,8 +27,5 @@ public class EmployeeService {
         employeeRepository.deleteById(id);
     }
 
-//    public void setVacation (LocalDate date){
-//
-//    }
 
 }

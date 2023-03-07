@@ -1,14 +1,14 @@
 package com.app.demo.employee;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.time.LocalDate;
 
 @Table(name = "EMPLOYEE")
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 @Data
 public class Employee {
 
@@ -18,7 +18,6 @@ public class Employee {
     private Long id;
     private String name;
     private String lastname;
-    private boolean vacation;
-    private LocalDate vacationDate;
+    private boolean onVacation;
 
 }

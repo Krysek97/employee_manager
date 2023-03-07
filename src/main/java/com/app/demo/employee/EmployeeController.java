@@ -29,6 +29,5 @@ public class EmployeeController {
         employeeService.deleteById(id);
     }
 
-//    @PostMapping
 
 }
