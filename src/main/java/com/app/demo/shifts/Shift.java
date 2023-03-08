@@ -1,4 +1,4 @@
-package com.app.demo.vacation;
+package com.app.demo.shifts;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,18 +7,18 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
-@Table(name = "VACATION")
-@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Vacation {
+@Entity
+@Table(name = "SHIFT")
+public class Shift {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "vacation_id")
     private Long id;
-    private LocalDate date;
+    private LocalDate data;
     private Long employeeId;
+    private String type;
 
 }

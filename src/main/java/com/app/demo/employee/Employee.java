@@ -18,6 +18,5 @@ public class Employee {
     private Long id;
     private String name;
     private String lastname;
-    private boolean onVacation;
 
 }
