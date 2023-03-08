@@ -17,8 +17,8 @@ public class ShiftService {
         return shiftRepository.save(shift);
     }
 
-    public List<Shift> getByEmployeeId(Long id){
-        return shiftRepository.getByEmployeeId(id);
+    public void delete(Long id){
+        shiftRepository.deleteById(id);
     }
 
 }

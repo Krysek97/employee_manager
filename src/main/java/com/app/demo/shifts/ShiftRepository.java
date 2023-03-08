@@ -9,7 +9,5 @@ import java.util.List;
 @Repository
 public interface ShiftRepository extends JpaRepository<Shift, Long> {
 
-    @Query("SELECT s FROM Shift s WHERE s.employee = ?1")
-    List<Shift> getByEmployeeId(Long id);
 
 }
