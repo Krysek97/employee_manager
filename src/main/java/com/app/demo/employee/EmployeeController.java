@@ -3,9 +3,10 @@ package com.app.demo.employee;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
-@RequestMapping("/employees")
+@RequestMapping("/employee")
 public class EmployeeController {
 
     private final EmployeeService employeeService;
@@ -22,6 +23,11 @@ public class EmployeeController {
     @GetMapping("/all")
     public List<Employee> all() {
         return employeeService.all();
+    }
+
+    @GetMapping("/{id}")
+    public Optional<Employee> byId(@PathVariable Long id){
+        return employeeService.byId(id);
     }
 
     @DeleteMapping("/delete/{id}")
